@@ -3,11 +3,16 @@
 //******************************************************************************
 myComboBox::myComboBox()
 {
-    this->setFocusPolicy(Qt::NoFocus);
+    this->setFocusPolicy(Qt::TabFocus);
 }
-
-void myComboBox::wheelEvent(QWheelEvent *e)
+//******************************************************************************
+void myComboBox::wheelEvent(QWheelEvent *)
 {
-    if(hasFocus())
-        QComboBox::wheelEvent(e);
+
+}
+//******************************************************************************
+void myComboBox::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key() ==  Qt::Key_Space)
+    QComboBox::keyPressEvent(event);
 }

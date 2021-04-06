@@ -9,7 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
     Widget = new QWidget();
     pGridLayout = new QGridLayout;
     pmyComboBox = new myComboBox;
-    pGridLayout->addWidget(pmyComboBox);
+    ComboBox = new QComboBox;
+    ComboBox->addItems(QStringList() << "1" << "2" << "3" << "4");
+    pGridLayout->addWidget(pmyComboBox,0, 1);
+    pGridLayout->addWidget(ComboBox,0, 0);
     Widget->setLayout(pGridLayout);
     setCentralWidget(Widget);
 

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include <mycombobox.h>
+#include <QComboBox>
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +23,7 @@ private:
     QWidget *Widget;
     QGridLayout *pGridLayout;
     myComboBox *pmyComboBox;
+    QComboBox *ComboBox;
 };
 
 #endif // MAINWINDOW_H

@@ -3,6 +3,8 @@
 #define MYCOMBOBOX_H
 //******************************************************************************
 #include <QComboBox>
+#include <QKeyEvent>
+#include <QDebug>
 //******************************************************************************
 
 class myComboBox: public QComboBox
@@ -10,7 +12,8 @@ class myComboBox: public QComboBox
     Q_OBJECT
 public:
     myComboBox();
-    void wheelEvent(QWheelEvent *e);
+    void wheelEvent(QWheelEvent *);
+    void keyPressEvent(QKeyEvent *event);
 
 private:
 
